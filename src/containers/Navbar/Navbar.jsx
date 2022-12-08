@@ -1,16 +1,15 @@
 import React from "react";
 import "./Navbar.scss";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 const Navbar = ({ label, handleInput, searchTerm }) => {
   return (
     <div className="navbar">
       <div>Navbar</div>
-      <input
-        type="text"
-        name={label}
-        value={searchTerm}
-        onInput={handleInput}
-        className="navbar__input"
+      <SearchBar
+        label={label}
+        handleInput={handleInput}
+        searchTerm={searchTerm}
       />
     </div>
   );

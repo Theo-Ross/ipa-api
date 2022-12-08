@@ -1,8 +1,15 @@
 import "./App.css";
 import Main from "./containers/Main/Main";
 import Navbar from "./containers/Navbar/Navbar";
+import { useState } from "react";
 
 const App = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const handleInput = (event) => {
+    const cleanInput = event.target.value.toLowerCase();
+    setSearchTerm(cleanInput);
+  };
+
   return (
     <div className="app">
       <header className="greeting">
@@ -10,7 +17,7 @@ const App = () => {
       </header>
 
       <div className="app__navbar">
-        <Navbar />
+        <Navbar handleInput={handleInput} searchTerm={searchTerm} />
       </div>
 
       <div className="app__main">
