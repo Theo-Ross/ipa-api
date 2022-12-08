@@ -6,15 +6,34 @@ import data from "./data/data";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [abvButton, setAbv] = useState(0);
+  const [phButton, setPh] = useState(100);
+  const [classicButton, setClassic] = useState(2022);
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
     setSearchTerm(cleanInput);
   };
 
-  const filteredData = data.filter((beer) => {
+  const handleOnChange = (event) => {
+    if (event.target.innerText === "High ABV over 6.0%") {
+      return setAbv(6);
+    } else if (event.target.innerText === "Acidic ph over 4") {
+      return setPh(4);
+    } else if (event.target.innerText === "Classic Range") {
+      return setClassic(2010);
+    }
+  };
+
+  let filteredData = data.filter((beer) => {
     const beerLowerCase = beer.name.toLocaleLowerCase();
-    return beerLowerCase.includes(searchTerm);
+    const slicedDate
+    return (
+      beerLowerCase.includes(searchTerm) &&
+      Number(beer.abv) > abvButton &&
+      Number(beer.ph) < phButton
+      
+    );
   });
 
   return (
@@ -24,7 +43,7 @@ const App = () => {
       </header>
 
       <div className="app__navbar">
-        <Navbar handleInput={handleInput} />
+        <Navbar handleInput={handleInput} handleOnChange={handleOnChange} />
       </div>
 
       <div className="app__main">

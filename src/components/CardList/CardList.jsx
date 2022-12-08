@@ -10,6 +10,8 @@ const CardList = (props) => {
           name={index.name}
           image_url={index.image_url}
           description={index.description}
+          abv={index.abv}
+          ph={index.ph}
         />
       </div>
     );

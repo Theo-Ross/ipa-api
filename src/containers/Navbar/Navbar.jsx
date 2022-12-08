@@ -1,11 +1,9 @@
 import React from "react";
 import "./Navbar.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import RadioButton2 from "../../components/RadioButtons/RadioButton2";
-import RadioButton3 from "../../components/RadioButtons/RadioButton3";
-import RadioButtons1 from "../../components/RadioButtons/RadioButtons1";
+import RadioButtons from "../../components/RadioButtons/RadioButtons";
 
-const Navbar = ({ label, handleInput, searchTerm }) => {
+const Navbar = ({ label, handleInput, searchTerm, handleOnChange }) => {
   return (
     <div className="navbar">
       <div>Navbar</div>
@@ -14,12 +12,7 @@ const Navbar = ({ label, handleInput, searchTerm }) => {
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
-
-      <RadioButtons1 />
-
-      <RadioButton2 />
-
-      <RadioButton3 />
+      <RadioButtons handleOnChange={handleOnChange} />
     </div>
   );
 };
