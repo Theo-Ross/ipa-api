@@ -1,7 +1,11 @@
 .cardlist {
-  border: 2px, solid, black;
   border-style: solid;
   height: 100%;
-  width: 70%;
-  border-right: auto;
+
+  width: 30%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
 }

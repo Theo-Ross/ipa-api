@@ -5,11 +5,13 @@ import data from "../../data/data";
 const CardList = (props) => {
   return data.map((index) => {
     return (
-      <Card
-        name={index.name}
-        image_url={index.image_url}
-        info={index.description}
-      />
+      <div className="cardlist">
+        <Card
+          name={index.name}
+          image_url={index.image_url}
+          description={index.description}
+        />
+      </div>
     );
   });
 };
