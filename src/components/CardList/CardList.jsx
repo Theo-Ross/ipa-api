@@ -1,9 +1,9 @@
 import "./CardList.scss";
 import Card from "../Card/Card";
-import data from "../../data/data";
 
 const CardList = (props) => {
-  return data.map((index) => {
+  const { filteredData } = props;
+  return filteredData.map((index) => {
     return (
       <div className="cardlist">
         <Card

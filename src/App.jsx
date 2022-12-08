@@ -2,13 +2,20 @@ import "./App.css";
 import Main from "./containers/Main/Main";
 import Navbar from "./containers/Navbar/Navbar";
 import { useState } from "react";
+import data from "./data/data";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
+
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
     setSearchTerm(cleanInput);
   };
+
+  const filteredData = data.filter((beer) => {
+    const beerLowerCase = beer.name.toLocaleLowerCase();
+    return beerLowerCase.includes(searchTerm);
+  });
 
   return (
     <div className="app">
@@ -17,11 +24,11 @@ const App = () => {
       </header>
 
       <div className="app__navbar">
-        <Navbar handleInput={handleInput} searchTerm={searchTerm} />
+        <Navbar handleInput={handleInput} />
       </div>
 
       <div className="app__main">
-        <Main />
+        <Main filteredData={filteredData} />
       </div>
     </div>
   );
