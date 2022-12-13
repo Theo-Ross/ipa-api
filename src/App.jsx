@@ -9,6 +9,7 @@ const App = () => {
   const [classicButton, setClassic] = useState(2023);
   const [filteredData, setFilteredData] = useState([]);
   const [phButton, setPhButton] = useState(0);
+  const [buttonActive, setButtonActive] = useState(false);
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
@@ -21,31 +22,37 @@ const App = () => {
 
   const handleOnChange = (event) => {
     if (event.target.innerText === "High ABV over 6.0%" && abvButton === 0) {
+      setButtonActive(true);
       return setAbv(6);
     } else if (
       event.target.innerText === "High ABV over 6.0%" &&
       abvButton === 6
     ) {
+      setButtonActive(false);
       return setAbv(0);
     } else if (
       event.target.innerText === "Acidic ph over 4" &&
       phButton === 0
     ) {
+      setButtonActive(true);
       return setPhButton(4);
     } else if (
       event.target.innerText === "Acidic ph over 4" &&
       phButton === 4
     ) {
+      setButtonActive(false);
       return setPhButton(0);
     } else if (
       event.target.innerText === "Classic Range" &&
       classicButton === 2023
     ) {
+      setButtonActive(true);
       return setClassic(2010);
     } else if (
       event.target.innerText === "Classic Range" &&
       classicButton === 2010
     ) {
+      setButtonActive(false);
       return setClassic(2023);
     }
   };
@@ -74,7 +81,11 @@ const App = () => {
       </header>
 
       <div className="app__navbar">
-        <Navbar handleInput={handleInput} handleOnChange={handleOnChange} />
+        <Navbar
+          handleInput={handleInput}
+          handleOnChange={handleOnChange}
+          isActive={buttonActive}
+        />
       </div>
 
       <div className="app__main">

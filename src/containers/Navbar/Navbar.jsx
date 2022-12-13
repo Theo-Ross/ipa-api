@@ -3,7 +3,13 @@ import "./Navbar.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import RadioButtons from "../../components/RadioButtons/RadioButtons";
 
-const Navbar = ({ label, handleInput, searchTerm, handleOnChange }) => {
+const Navbar = ({
+  label,
+  handleInput,
+  searchTerm,
+  handleOnChange,
+  buttonActive,
+}) => {
   return (
     <div className="navbar">
       <div>Navbar</div>
@@ -12,7 +18,10 @@ const Navbar = ({ label, handleInput, searchTerm, handleOnChange }) => {
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
-      <RadioButtons handleOnChange={handleOnChange} />
+      <RadioButtons
+        handleOnChange={handleOnChange}
+        buttonActive={buttonActive}
+      />
     </div>
   );
 };
