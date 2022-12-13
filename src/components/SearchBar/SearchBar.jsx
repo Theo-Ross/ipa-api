@@ -6,13 +6,12 @@ const SearchBar = (props) => {
 
   return (
     <div>
-      <div>SearchBar</div>
       <input
         type="text"
         name={label}
         value={searchTerm}
         onInput={handleInput}
-        className="navbar__input"
+        className="searchbar__input"
       />
     </div>
   );

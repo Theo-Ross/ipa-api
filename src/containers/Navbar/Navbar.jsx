@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import RadioButtons from "../../components/RadioButtons/RadioButtons";
+import RangeInput from "../../components/rangeInput/RangeInput";
 
 const Navbar = ({
   label,
@@ -11,10 +12,10 @@ const Navbar = ({
   abvButtonActive,
   phButtonActive,
   classicButtonActive,
+  handleInputChange,
 }) => {
   return (
     <div className="navbar">
-      <div>Navbar</div>
       <SearchBar
         label={label}
         handleInput={handleInput}
@@ -25,6 +26,12 @@ const Navbar = ({
         abvButtonActive={abvButtonActive}
         phButtonActive={phButtonActive}
         classicButtonActive={classicButtonActive}
+      />
+      <RangeInput
+        className="navbar__range"
+        min={1}
+        max={80}
+        handleInputChange={handleInputChange}
       />
     </div>
   );

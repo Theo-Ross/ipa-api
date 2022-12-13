@@ -1,4 +1,19 @@
-.RadioButtons__active {
-  background-color: blue;
-  color: blue;
+@use "../../styles/variables" as *;
+
+.RadioButtons {
+  &__active {
+    width: 85%;
+    height: 70%;
+    margin: 5%;
+    background-color: $color-3;
+    font-size: larger;
+  }
+
+  &__unactive {
+    width: 85%;
+    height: 70%;
+    color: black;
+    background-color: $color-4;
+    margin: 5%;
+  }
 }
