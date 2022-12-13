@@ -8,7 +8,9 @@ const Navbar = ({
   handleInput,
   searchTerm,
   handleOnChange,
-  buttonActive,
+  abvButtonActive,
+  phButtonActive,
+  classicButtonActive,
 }) => {
   return (
     <div className="navbar">
@@ -20,7 +22,9 @@ const Navbar = ({
       />
       <RadioButtons
         handleOnChange={handleOnChange}
-        buttonActive={buttonActive}
+        abvButtonActive={abvButtonActive}
+        phButtonActive={phButtonActive}
+        classicButtonActive={classicButtonActive}
       />
     </div>
   );

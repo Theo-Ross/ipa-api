@@ -1,12 +1,17 @@
 import React from "react";
 import "./RadioButtons.scss";
 
-const RadioButtons = ({ handleOnChange, buttonActive }) => {
+const RadioButtons = ({
+  handleOnChange,
+  abvButtonActive,
+  classicButtonActive,
+  phButtonActive,
+}) => {
   return (
     <div>
       <button
         className={
-          buttonActive ? "RadioButtons__active" : "RadioButtons__unactive"
+          abvButtonActive ? "RadioButtons__active" : "RadioButtons__unactive"
         }
         onClick={handleOnChange}
       >
@@ -14,7 +19,9 @@ const RadioButtons = ({ handleOnChange, buttonActive }) => {
       </button>
       <button
         className={
-          buttonActive ? "RadioButtons__active" : "RadioButtons__unactive"
+          classicButtonActive
+            ? "RadioButtons__active"
+            : "RadioButtons__unactive"
         }
         onClick={handleOnChange}
       >
@@ -22,7 +29,7 @@ const RadioButtons = ({ handleOnChange, buttonActive }) => {
       </button>
       <button
         className={
-          buttonActive ? "RadioButtons__active" : "RadioButtons__unactive"
+          phButtonActive ? "RadioButtons__active" : "RadioButtons__unactive"
         }
         onClick={handleOnChange}
       >
