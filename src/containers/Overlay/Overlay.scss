@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100000vh;
+  background: rgba(0, 0, 0, 0.6);
+
+  &__active {
+    display: flex;
+  }
+
+  &__inactive {
+    display: none;
+  }
+}

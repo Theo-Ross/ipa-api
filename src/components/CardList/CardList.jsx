@@ -2,7 +2,7 @@ import "./CardList.scss";
 import Card from "../Card/Card";
 
 const CardList = (props) => {
-  const { filteredData } = props;
+  const { filteredData, zoomCardClick } = props;
   return filteredData.map((index) => {
     return (
       <div className="cardlist">
@@ -12,6 +12,7 @@ const CardList = (props) => {
           description={index.description}
           abv={index.abv}
           ph={index.ph}
+          zoomCardClick={zoomCardClick}
         />
       </div>
     );

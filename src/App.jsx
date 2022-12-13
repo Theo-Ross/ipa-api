@@ -2,6 +2,7 @@ import "./App.scss";
 import Main from "./containers/Main/Main";
 import Navbar from "./containers/Navbar/Navbar";
 import { useState, useEffect } from "react";
+import Overlay from "./containers/Overlay/Overlay";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -65,6 +66,31 @@ const App = () => {
     }
   };
 
+  const zoomCardClick = (event) => {
+    let zoom = event.target.title;
+    toString(zoom);
+    setZoomTerm(zoom);
+    setZoomActive(true);
+  };
+
+  const [zoomFilter, setZoomFilter] = useState("");
+  const [zoomTerm, setZoomTerm] = useState("");
+  const [zoomActive, setZoomActive] = useState("false");
+
+  console.log(zoomTerm);
+
+  const getZoomBeer = async (name) => {
+    const url = `https://api.punkapi.com/v2/beers?beer_name=${name}`;
+    console.log(url);
+    const result = await fetch(url);
+    const zoomData = await result.json();
+    setZoomFilter(zoomData);
+  };
+
+  useEffect(() => {
+    getZoomBeer(zoomTerm);
+  }, [zoomTerm]);
+
   const getBeers = async (abvResult, classicResult) => {
     const url = `https://api.punkapi.com/v2/beers?${searchTerm}abv_gt=${abvResult}&brewed_before=11-${classicResult}&per_page=${userNumber}`;
     const result = await fetch(url);
@@ -99,8 +125,19 @@ const App = () => {
           />
         </div>
 
+        <div className="overlay">
+          <Overlay
+            zoomFilter={zoomFilter}
+            className={zoomActive ? "overlay__active" : "overlay__inactive"}
+          />
+        </div>
+
         <div className="app__main">
-          <Main filteredData={filteredData} searchTerm={searchTerm} />
+          <Main
+            filteredData={filteredData}
+            searchTerm={searchTerm}
+            zoomCardClick={zoomCardClick}
+          />
         </div>
       </div>
     </div>

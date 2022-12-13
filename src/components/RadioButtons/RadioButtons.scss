@@ -6,14 +6,16 @@
     height: 70%;
     margin: 5%;
     background-color: $color-3;
-    font-size: larger;
+    font-size: 90%;
+    border-radius: 20%;
   }
 
   &__unactive {
     width: 85%;
     height: 70%;
-    color: black;
     background-color: $color-4;
+    font-size: 90%;
     margin: 5%;
+    border-radius: 20%;
   }
 }

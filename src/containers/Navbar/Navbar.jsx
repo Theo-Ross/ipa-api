@@ -21,17 +21,13 @@ const Navbar = ({
         handleInput={handleInput}
         searchTerm={searchTerm}
       />
+      <RangeInput min={1} max={80} handleInputChange={handleInputChange} />
+
       <RadioButtons
         handleOnChange={handleOnChange}
         abvButtonActive={abvButtonActive}
         phButtonActive={phButtonActive}
         classicButtonActive={classicButtonActive}
-      />
-      <RangeInput
-        className="navbar__range"
-        min={1}
-        max={80}
-        handleInputChange={handleInputChange}
       />
     </div>
   );
