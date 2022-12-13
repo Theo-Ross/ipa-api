@@ -23,12 +23,15 @@ const App = () => {
   const handleOnChange = (event) => {
     if (event.target.innerText === "High ABV over 6.0%" && abvButton === 0) {
       setButtonActive(true);
+      console.log(buttonActive);
       return setAbv(6);
     } else if (
       event.target.innerText === "High ABV over 6.0%" &&
       abvButton === 6
     ) {
       setButtonActive(false);
+      console.log(buttonActive);
+
       return setAbv(0);
     } else if (
       event.target.innerText === "Acidic ph over 4" &&
@@ -84,7 +87,7 @@ const App = () => {
         <Navbar
           handleInput={handleInput}
           handleOnChange={handleOnChange}
-          isActive={buttonActive}
+          buttonActive={buttonActive}
         />
       </div>
 
