@@ -13,8 +13,6 @@ const CardList = (props) => {
           abv={index.abv}
           ph={index.ph}
         />
-
-        {/* {searchTerm.length > 0 ? employeeSearch : teamMap} */}
       </div>
     );
   });
