@@ -78,7 +78,7 @@ const App = () => {
 
   const [zoomFilter, setZoomFilter] = useState();
   const [zoomTerm, setZoomTerm] = useState();
-  const [zoomActive, setZoomActive] = useState("false");
+  const [zoomActive, setZoomActive] = useState(false);
 
   console.log(zoomActive);
 
@@ -127,7 +127,7 @@ const App = () => {
           />
         </div>
         {zoomFilter ? (
-          <div className={zoomActive ? "overlay" : "overlay__inactive"}>
+          <div className={zoomActive ? "overlay" : "inactive"}>
             <Overlay zoomRemove={zoomRemove} zoomFilter={zoomFilter} />
           </div>
         ) : null}
