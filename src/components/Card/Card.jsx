@@ -8,7 +8,7 @@ const Card = ({ name, image_url, description, abv, ph, zoomCardClick }) => {
       <img src={image_url} alt="beer image" className="card__image" />
       <h2 className="card__h2">{name}</h2>
       <p className="card__info"> {textShortener}</p>
-      <p title={name} className="class__link" onClick={zoomCardClick}>
+      <p title={name} className="card__link" onClick={zoomCardClick}>
         {" "}
         read more{" "}
       </p>

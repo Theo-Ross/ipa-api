@@ -1,23 +1,31 @@
 @use "../../styles/variables" as *;
 
 .zoomcard {
-  margin-left: auto;
-  width: 60vw;
-  text-align: center;
+  margin-left: 20%;
+  width: 60%;
   height: 100vh;
-  margin: 2%;
+  text-align: center;
   background-color: $color-2;
   border-radius: 20%;
-  position: absolute;
-  justify-content: center;
+  font-size: large;
 
   &__image {
     width: 10vw;
     max-height: 25vw;
     min-height: 25vw;
+    margin: 2%;
   }
 
   &__h2 {
-    font-size: 100%;
+    font-size: 300%;
+  }
+
+  &__info {
+    margin: 2%;
+  }
+
+  &__tagline {
+    font-style: italic;
+    font-size: larger;
   }
 }
