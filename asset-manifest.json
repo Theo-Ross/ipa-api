@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ipa-api/static/css/main.a19f06bc.css",
-    "main.js": "/ipa-api/static/js/main.2d768f99.js",
+    "main.js": "/ipa-api/static/js/main.dc14291d.js",
     "static/js/787.8d5ff47e.chunk.js": "/ipa-api/static/js/787.8d5ff47e.chunk.js",
     "index.html": "/ipa-api/index.html",
     "main.a19f06bc.css.map": "/ipa-api/static/css/main.a19f06bc.css.map",
-    "main.2d768f99.js.map": "/ipa-api/static/js/main.2d768f99.js.map",
+    "main.dc14291d.js.map": "/ipa-api/static/js/main.dc14291d.js.map",
     "787.8d5ff47e.chunk.js.map": "/ipa-api/static/js/787.8d5ff47e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a19f06bc.css",
-    "static/js/main.2d768f99.js"
+    "static/js/main.dc14291d.js"
   ]
 }
