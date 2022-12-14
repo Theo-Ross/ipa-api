@@ -17,7 +17,7 @@ const App = () => {
 
   const handleInput = (event) => {
     const cleanInput = event.target.value.toLowerCase();
-    if (event == "") {
+    if (event === "") {
       setSearchTerm("");
     } else {
       setSearchTerm(`beer_name=${cleanInput}&`);

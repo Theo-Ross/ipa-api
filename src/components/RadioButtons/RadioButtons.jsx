@@ -33,7 +33,7 @@ const RadioButtons = ({
         }
         onClick={handleOnChange}
       >
-        Acidic ph over 4
+        Acidic ph under 4
       </button>
     </div>
   );
