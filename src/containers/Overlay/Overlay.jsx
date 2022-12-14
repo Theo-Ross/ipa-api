@@ -2,19 +2,23 @@ import React from "react";
 import "./Overlay.scss";
 import ZoomCard from "../../components/ZoomCard/ZoomCard";
 
-const Overlay = ({ zoomFilter }) => {
-  //   return zoomFilter.map((i) => {
-  return (
-    <div>
-      <ZoomCard
-        name={zoomFilter.name}
-        image_url={zoomFilter.image_url}
-        description={zoomFilter.description}
-        abv={zoomFilter.abv}
-        ph={zoomFilter.ph}
-      />
-    </div>
-  );
+const Overlay = ({ zoomFilter, zoomRemove }) => {
+  return zoomFilter.map((i) => {
+    return (
+      <div>
+        <ZoomCard
+          name={i.name}
+          tagline={i.tagline}
+          image_url={i.image_url}
+          description={i.description}
+          zoomRemove={zoomRemove}
+          abv={i.abv}
+          ph={i.ph}
+          ibu={i.ibu}
+        />
+      </div>
+    );
+  });
 };
 
 export default Overlay;

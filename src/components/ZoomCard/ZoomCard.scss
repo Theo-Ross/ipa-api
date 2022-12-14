@@ -2,12 +2,14 @@
 
 .zoomcard {
   margin-left: auto;
-  width: 100vw;
+  width: 60vw;
   text-align: center;
   height: 100vh;
   margin: 2%;
   background-color: $color-2;
   border-radius: 20%;
+  position: absolute;
+  justify-content: center;
 
   &__image {
     width: 10vw;
