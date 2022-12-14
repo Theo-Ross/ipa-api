@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Theo-Ross/ipa-api/static/css/main.a19f06bc.css",
+    "main.js": "/Theo-Ross/ipa-api/static/js/main.c5b80d2c.js",
+    "static/js/787.8d5ff47e.chunk.js": "/Theo-Ross/ipa-api/static/js/787.8d5ff47e.chunk.js",
+    "index.html": "/Theo-Ross/ipa-api/index.html",
+    "main.a19f06bc.css.map": "/Theo-Ross/ipa-api/static/css/main.a19f06bc.css.map",
+    "main.c5b80d2c.js.map": "/Theo-Ross/ipa-api/static/js/main.c5b80d2c.js.map",
+    "787.8d5ff47e.chunk.js.map": "/Theo-Ross/ipa-api/static/js/787.8d5ff47e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a19f06bc.css",
+    "static/js/main.c5b80d2c.js"
+  ]
+}
