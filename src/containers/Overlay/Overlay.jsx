@@ -15,6 +15,7 @@ const Overlay = ({ zoomFilter, zoomRemove }) => {
           abv={i.abv}
           ph={i.ph}
           ibu={i.ibu}
+          food_pairing={i.food_pairing}
         />
       </div>
     );

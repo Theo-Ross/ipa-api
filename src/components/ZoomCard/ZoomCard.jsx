@@ -10,6 +10,7 @@ const ZoomCard = ({
   zoomRemove,
   ibu,
   tagline,
+  food_pairing,
 }) => {
   return (
     <div className="zoomcard">
@@ -23,6 +24,8 @@ const ZoomCard = ({
       <p>abv: {abv}</p>
       <p>ph: {ph}</p>
       <p>ibu: {ibu}</p>
+
+      <p className="food_pairing">recommended food pairings: {food_pairing} </p>
     </div>
   );
 };
